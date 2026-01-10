@@ -5,3 +5,7 @@
 .progress-bar-item-3 {
     width: 70%;
 }
+
+.bg-image {
+    background-image: url('/assets/images/cooked-fish-2.jpg');
+}
