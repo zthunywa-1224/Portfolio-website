@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
   
 </head>
-<body>
+<body class="bg-danger text-light">
 
 <!-- NAVBAR -->
 <!-- ================= NAVBAR ================= -->
@@ -38,6 +38,7 @@
   </div>
 </nav>
 
+
 <!-- HERO -->
 <section class="bg-primary text-white text-center py-5">
   <div class="container">
@@ -63,7 +64,6 @@
 <section class="bg-light py-5">
   <div class="container">
     <h2 class="text-center mb-4">My Skills</h2>
-
     <ul class="list-group col-md-6 mx-auto">
       <li class="list-group-item">HTML5 & CSS3</li>
       <li class="list-group-item">Bootstrap 5</li>
@@ -71,6 +71,33 @@
       <li class="list-group-item">GitHub Pages</li>
     </ul>
   </div>
+</section>
+<section class="wrapper text-center border-1">
+  
+ <form action="/submit" method="post">
+  <div>
+    <label for="name">Name:</label>
+    <br>
+    <input type="text" id="name" name="name" required>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <br>
+    <input type="email" id="email" name="email" required>
+  </div>
+  <div>
+    <label for="tel">Phone:</label>
+    <br>
+    <input title="text" type="tel" id="phone" name="phone" required>
+  </div>
+  
+  <div>
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" required></textarea>
+  </div>
+  <br>
+  <button type="submit">Submit</button>
+</form>
 </section>
 
 <!-- PROJECTS -->
