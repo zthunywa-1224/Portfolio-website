@@ -13,3 +13,10 @@
 .dessert-video {
     text-decoration: none;
 }
+
+.background-image {
+    background-image: url('/assets/images/github-page-photo.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.01;
+}
