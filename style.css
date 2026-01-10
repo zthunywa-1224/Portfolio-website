@@ -9,3 +9,7 @@
 .bg-image {
     background-image: url('/assets/images/cooked-fish-2.jpg');
 }
+
+.dessert-video {
+    text-decoration: none;
+}
