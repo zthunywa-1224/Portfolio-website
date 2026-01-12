@@ -7,6 +7,80 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.4.0/simpleicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 40px;
+    text-align: center;
+  }
+
+  .stars {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    font-size: 35px;
+  }
+
+  .stars input {
+    display: none;
+  }
+
+  .stars label {
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  /* Hover effect */
+  .stars label:hover,
+  .stars label:hover ~ label {
+    color: gold;
+  }
+
+  /* Checked stars */
+  .stars input:checked ~ label {
+    color: gold;
+  }
+
+  #rating-value {
+    margin-top: 15px;
+    font-weight: bold;
+  }
+</style>
+</head>
+
+<body>
+
+<h2>Rate this product</h2>
+
+<div class="stars">
+  <input type="radio" name="rating" id="star5" value="5">
+  <label for="star5">★</label>
+
+  <input type="radio" name="rating" id="star4" value="4">
+  <label for="star4">★</label>
+
+  <input type="radio" name="rating" id="star3" value="3">
+  <label for="star3">★</label>
+
+  <input type="radio" name="rating" id="star2" value="2">
+  <label for="star2">★</label>
+
+  <input type="radio" name="rating" id="star1" value="1">
+  <label for="star1">★</label>
+</div>
+
+<p id="rating-value">No rating selected</p>
+
+<script>
+  const stars = document.querySelectorAll('input[name="rating"]');
+  const output = document.getElementById("rating-value");
+
+  stars.forEach(star => {
+    star.addEventListener("change", () => {
+      output.textContent = You rated; ${star.value} star(s);
+    });
+  });
+</script>
                                                                                                                                                                                                     
 </head>
 <body>
@@ -17,7 +91,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="index.html">Home</a>
                     </li>
@@ -40,6 +114,7 @@
                         <a class="nav-link active" href="testimonials.html">Testimonials</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="fish.html">Fish Link</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dessert.html">View More</a></li>
 s
                 </ul>
             </div>
@@ -52,7 +127,7 @@ s
 
         <div class="video d-flex justify-cont
         ent-center py-3 px-3 mt-3 mb-3 rounded-pill text-decoration-none ">
-        <a href="https://youtu.be/AOR4TFSLjpE" class="text-center fw-bold bg-primary text-light text-decoration-none py-2 px-3 mt-2 mb-2 rounded-pill">Reviews</a>
+        <a href="https://www.youtube.com/embed/AOR4TFSLjpE" class="text-center fw-bold bg-primary text-light text-decoration-none py-2 px-3 mt-2 mb-2 rounded-pill">Reviews</a>
         </div>
         
         <div class="row mt-5">
@@ -64,13 +139,7 @@ s
                         
 
    <footer class="blockquote-footer">
-    <div class="star-rating">
-    <i class="fa fa-star" data-rating="1"></i>
-    <i class="fa fa-star" data-rating="2"></i>
-    <i class="fa fa-star" data-rating="3"></i>
-    <i class="fa fa-star" data-rating="4"></i>
-    <i class="fa fa-star" data-rating="5"></i>
-</div>
+    
     <br>Z .Sherley</footer>
    </div>
   </div>
@@ -81,12 +150,7 @@ s
                     <div class="card-body">
                         <p class="card-text">"Ordered for a birthday & it was a hit! 🎂 Thanks Dessert Co."</p>
                         <footer class="blockquote-footer">
-                            <div class="star-rating">
-    <i class="fa fa-star" data-rating="1"></i>
-    <i class="fa fa-star" data-rating="2"></i>
-    <i class="fa fa-star" data-rating="3"></i>
-    <i class="fa fa-star" data-rating="4"></i>
-    <i class="fa fa-star" data-rating="5"></i>
+                            
 </div>
 <br><br>John Dyasi.</footer>
                         
@@ -102,13 +166,7 @@ s
                         
                         <footer class="blockquote-footer">
                             <br><br>Liz K.
-                            <div class="star-rating">
-    <i class="fa fa-star" data-rating="1"></i>
-    <i class="fa fa-star" data-rating="2"></i>
-    <i class="fa fa-star" data-rating="3"></i>
-    <i class="fa fa-star" data-rating="4"></i>
-    <i class="fa fa-star" data-rating="5"></i>
-</div>
+                            
                         </footer>
                     </div>
                 </div>
@@ -123,13 +181,7 @@ s
                         <p class="card-text">"Amazing service & fast delivery. 👍"</p>
                         
                         <footer class="blockquote-footer">
-                            <div class="star-rating">
-    <i class="fa fa-star" data-rating="1"></i>
-    <i class="fa fa-star" data-rating="2"></i>
-    <i class="fa fa-star" data-rating="3"></i>
-    <i class="fa fa-star" data-rating="4"></i>
-    <i class="fa fa-star" data-rating="5"></i>
-</div>
+                            
                             <br><br>Nozipho T.</footer>
                     </div>
                 </div>
@@ -142,13 +194,7 @@ s
                         
                         <footer class="blockquote-footer">
                             <br><br>Anna P.
-                            <div class="star-rating">
-    <i class="fa fa-star" data-rating="1"></i>
-    <i class="fa fa-star" data-rating="2"></i>
-    <i class="fa fa-star" data-rating="3"></i>
-    <i class="fa fa-star" data-rating="4"></i>
-    <i class="fa fa-star" data-rating="5"></i>
-</div>
+                            
                         </footer>
                     </div>
                 </div>
@@ -160,13 +206,7 @@ s
                         <p class="card-text">"Best treat for corporate events. 💼"</p>
                         
       <footer class="blockquote-footer">
-        <div class="star-rating">
-    <i class="fa fa-star" data-rating="1"></i>
-    <i class="fa fa-star" data-rating="2"></i>
-    <i class="fa fa-star" data-rating="3"></i>
-    <i class="fa fa-star" data-rating="4"></i>
-    <i class="fa fa-star" data-rating="5"></i>
-</div>
+        
         <br><br>Tom S.</footer>
  </div>
    </div>
@@ -178,7 +218,7 @@ s
         <div class="website-box text-center mt-3">
             <a href="https://www.bing.com/ck/a?!&&p=a05746abc7437ddd920eba8bf24c6cd4aa888868ac71193aef4c3b6453823b4bJmltdHM9MTc2NzM5ODQwMA&ptn=3&ver=2&hsh=4&fclid=20ada671-bac2-6b10-2114-b2a6bb5c6a30&psq=websites+for+dessert&u=a1aHR0cHM6Ly93d3cuZm9vZGFuZGhvbWUuY28uemEvcmVjaXBlcy9kZXNzZXJ0" class="bg-danger py-2 px-3 mt-2 mb-4 fw-bold text-light rounded-pill my-4 mx-4 text-decoration-none">Visit Us</a>
         </div>
-        <p class="mt-3 fw-bold">Follow us: 
+        <p class="mt-3 fw-bold"> 
             <a href="https://www.facebook.com" title="link" class="text-light mx-1"><i class="fab fa-facebook"></i>Facebook</a>
             <a href="https://www.twitter.com" title="link" class="text-light mx-1"><i class="fab fa-twitter"></i>Twitter</a>
         </p>
